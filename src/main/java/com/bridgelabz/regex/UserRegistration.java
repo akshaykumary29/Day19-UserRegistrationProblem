@@ -31,7 +31,11 @@ public class UserRegistration extends UserDetails {
         System.out.println("Enter Your Mobile Number: ");
         String mobileNumber = scanner.next();
         checkValidMobileNumber(mobileNumber);
-        
+
+        System.out.println("Enter Your Password: ");
+        String password = scanner.next();
+        checkValidPassword(password);
+
         scanner.close();
     }
 }
