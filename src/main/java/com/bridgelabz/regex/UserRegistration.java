@@ -38,7 +38,12 @@ public class UserRegistration extends UserDetails {
 
         System.out.println("Enter Your Password: ");
         String password1 = scanner.next();
-        checkValidPassword1(password);
+        checkValidPassword1(password1);
+
+
+        System.out.println("Enter Your Password: ");
+        String password2 = scanner.next();
+        checkValidPassword2(password2);
 
         scanner.close();
     }

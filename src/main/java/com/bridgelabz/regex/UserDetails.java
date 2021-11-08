@@ -93,4 +93,21 @@ public class UserDetails {
         else
             System.out.println(password1 + " is an Invalid Password");
     }
+
+    /**
+     * Password Rule3 - Atleast one Numeric number in the password
+     * @param password2
+     */
+    public static void checkValidPassword2(String password2) {
+
+        boolean isPassword;
+        String passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])([a-zA-Z]*([@#$%^&-+=()])*).{8,}$";
+        Pattern pattern = Pattern.compile(passwordRegex);
+        Matcher matcher = pattern.matcher(password2);
+        isPassword = matcher.matches();
+        if (isPassword)
+            System.out.println(password2 + " is a Valid Password\n");
+        else
+            System.out.println(password2 + " is an Invalid Password");
+    }
 }
