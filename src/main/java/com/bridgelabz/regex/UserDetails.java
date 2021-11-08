@@ -60,6 +60,10 @@ public class UserDetails {
             System.out.println(mobileNumber + " is an InValid Mobile Number");
     }
 
+    /**
+     * Password Rule1 - minimum 8 Characters
+     * @param password
+     */
     public static void checkValidPassword(String password) {
 
         boolean isPassword;
@@ -71,5 +75,22 @@ public class UserDetails {
             System.out.println(password + " is a Valid Password\n");
         else
             System.out.println(password + " is an Invalid Password");
+    }
+
+    /**
+     * Passwor Rule2 - Should have at least 1 Upper Case
+     * @param password1
+     */
+    public static void checkValidPassword1(String password1) {
+
+        boolean isPassword;
+        String passwordRegex = "^(?=.*[A-Z])([a-z0-9]*([@#$%^&-+=()])*).{8,}$";
+        Pattern pattern = Pattern.compile(passwordRegex);
+        Matcher matcher = pattern.matcher(password1);
+        isPassword = matcher.matches();
+        if (isPassword)
+            System.out.println(password1 + " is a Valid Password\n");
+        else
+            System.out.println(password1 + " is an Invalid Password");
     }
 }
