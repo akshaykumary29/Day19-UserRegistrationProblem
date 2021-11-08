@@ -16,7 +16,7 @@ public class UserRegistration extends UserDetails {
         // take input from user
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter Your First Name: ");
+        System.out.println("Enter Your First Name: ");
         String firstName = scanner.next();
         checkValidFirstName(firstName);
 
@@ -28,6 +28,10 @@ public class UserRegistration extends UserDetails {
         String email = scanner.next();
         checkValidEmail(email);
 
+        System.out.println("Enter Your Mobile Number: ");
+        String mobileNumber = scanner.next();
+        checkValidMobileNumber(mobileNumber);
+        
         scanner.close();
     }
 }

@@ -15,9 +15,9 @@ public class UserDetails {
         // check if it Valid Or Not
         isFirstName = matcher.matches();
         if (isFirstName)
-            System.out.println(firstName + " is Valid First Name");
+            System.out.println(firstName + " is a Valid First Name");
         else
-            System.out.println(firstName + " is Invalid First Name");
+            System.out.println(firstName + " is an Invalid First Name");
     }
 
     public static void checkValidLastName(String lastName) {
@@ -28,9 +28,9 @@ public class UserDetails {
         Matcher matcher = pattern.matcher(lastName);
         islastName = matcher.matches();
         if (islastName)
-            System.out.println(lastName + " is Valid Last Name");
+            System.out.println(lastName + " is a Valid Last Name");
         else
-            System.out.println(lastName + " is Invalid Last Name");
+            System.out.println(lastName + " is an Invalid Last Name");
     }
 
     public static void checkValidEmail(String email) {
@@ -41,8 +41,22 @@ public class UserDetails {
         Matcher matcher = pattern.matcher(email);
         isEmail = matcher.matches();
         if (isEmail)
-            System.out.println(email + " is Valid Email Address");
+            System.out.println(email + " is a Valid Email Address");
         else
-            System.out.println(email + " is Invalid Email Address");
+            System.out.println(email + " is an Invalid Email Address");
+    }
+
+    public static void checkValidMobileNumber(String mobileNumber) {
+
+        boolean isMobileNumber;
+        String mobileNumberRegex = "^[0-9]{2}\\s{1}[0-9]{10}$";
+        Pattern pattern = Pattern.compile(mobileNumberRegex);
+        Matcher matcher = pattern.matcher(mobileNumber);
+        isMobileNumber = matcher.matches();
+
+        if (isMobileNumber)
+            System.out.println(mobileNumber + " is a Valid Mobile Number");
+        else
+            System.out.println(mobileNumber + " is an InValid Mobile Number");
     }
 }
