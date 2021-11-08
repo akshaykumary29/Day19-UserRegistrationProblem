@@ -32,4 +32,17 @@ public class UserDetails {
         else
             System.out.println(lastName + " is Invalid Last Name");
     }
+
+    public static void checkValidEmail(String email) {
+
+        boolean isEmail;
+        String emailRegex = "^[a-z]+[a-z0-9]*[- . + _]?[a-z0-9]+[@]{1}[a-z]+[.]?[a-z]+$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(email);
+        isEmail = matcher.matches();
+        if (isEmail)
+            System.out.println(email + " is Valid Email Address");
+        else
+            System.out.println(email + " is Invalid Email Address");
+    }
 }

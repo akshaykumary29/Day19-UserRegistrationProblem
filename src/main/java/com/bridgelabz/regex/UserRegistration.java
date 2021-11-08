@@ -24,6 +24,10 @@ public class UserRegistration extends UserDetails {
         String lastName = scanner.next();
         checkValidLastName(lastName);
 
+        System.out.println("Enter Your Email Address: ");
+        String email = scanner.next();
+        checkValidEmail(email);
+
         scanner.close();
     }
 }
